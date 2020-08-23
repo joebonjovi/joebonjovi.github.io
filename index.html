@@ -1,0 +1,13 @@
+<html>
+<script>
+var ip;
+fetch("https://api.ipify.org/?format=json")
+.then(results => results.json())
+.then(data => ip = (data.ip).toString());
+function alertIp(){
+ip = ip.replace(/\./g,'')
+alert(ip);
+}
+</script>
+<button onclick="alertIp()">get ip</button>
+</html>
